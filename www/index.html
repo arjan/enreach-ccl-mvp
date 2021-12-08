@@ -2,13 +2,57 @@
   <head>
     <title>CCL Minimum Viable Prototype</title>
 
-    <script src="js/app.js"></script>
+    <script src="/main.js"></script>
   </head>
   <body>
-    <p>xxx</p>
-    <h1>Hello</h1>
+    <h1 class="heading-1">This is heading-1</h1>
+    <p class="body-1">This is a body-1</p>
+    <p class="body-2">This is a body-2</p>
 
-    <cl-button variation="primary">Click</cl-button>
+    <cl-button>Click</cl-button>
+
+    <cl-action-bar>
+      <cl-button action="true" variation="text" icon-name="action--edit">Edit</cl-button>
+      <cl-button action="true" variation="text" icon-name="action--copy">Copy</cl-button>
+      <cl-button action="true" variation="text" icon-name="action--save">Save</cl-button>
+      <cl-button action="true" variation="text" icon-name="action--delete">Delete</cl-button>
+    </cl-action-bar>
+
+
+    <cl-list-item
+      primary-text="Primary Text"
+      secondary-text="Secondary Text"
+    >
+      <cl-avatar slot="leading" image="https://upload.wikimedia.org/wikipedia/commons/a/a9/A_sunflower.jpg" initials="HD"></cl-avatar>
+    <div slot="trailing">
+      <p style="margin: 0; color: var(--color-neutral-500); line-height: var(--size-spacing-2)" class="body-2">12:34</p>
+      <cl-icon name="action--star--filled" style="float: right; color: var(--color-neutral-500)" size="2"></cl-icon>
+    </div>
+  </cl-list-item>
+
+  <cl-loader variant="circular" size="3" thickness="12" indeterminate></cl-loader>
+
+  <cl-pagination total-results="1000" input-text="Go to page" result-text="Results: 1-15 of 1000"></cl-pagination>
+
+  <cl-pictogram size="15" name="add--catalogue" ariaLabel="AriaLabel" size=50></cl-pictogram>
+
+  <cl-status type="blf-idle"></cl-status>
+  <cl-status type="blf-busy"></cl-status>
+  <cl-status type="blf-offline"></cl-status>
+  <cl-status type="blf-ringing"></cl-status>
+  <cl-status type="presence-available" active></cl-status>
+  <cl-status type="presence-dnd" active></cl-status>
+  <cl-status type="presence-focused" active></cl-status>
+  <cl-status type="presence-invisible" active></cl-status>
+
+  <cl-tabs>
+    <cl-tab name='stories-2' label='Invoices (10)' active></cl-tab>
+    <cl-tab name='stories-2' label='Customers (123)'></cl-tab>
+    <cl-tab name='stories-2' label='Products (456)'></cl-tab>
+  </cl-tabs>
+
+  <cl-text-field variant="default" label="Default" placeholder="Placeholder"></cl-text-field>
+  <cl-text-field variant="subtle" label="Subtle" placeholder="Placeholder"></cl-text-field>
 
   </body>
 </html>
